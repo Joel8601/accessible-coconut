@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=transmission-gtk
+Hidden=true
+Name=Transmission-gtk
+Comment=Download torrent on start
+X-MATE-Autostart-Delay=0

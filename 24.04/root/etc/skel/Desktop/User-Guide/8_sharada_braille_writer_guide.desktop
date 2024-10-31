@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=8 Sharada-Braille-Writer guide
+Comment=User-Guide
+Icon=/usr/share/sbw/icon.png
+Exec=firefox /usr/share/sbw/user-guide/user-guide.html
+Terminal=false
+Type=Application

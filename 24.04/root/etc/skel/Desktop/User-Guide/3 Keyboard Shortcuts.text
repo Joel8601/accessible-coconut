@@ -1,0 +1,29 @@
+
+Super+Home           Open Home Folder
+
+Super+Alt+up         Increase the system volume,
+Super+Alt+down       Decrease the system volume,
+Super+Alt+7          Mute system volume ,
+Super+Alt+s          Toggle screen reader,
+Super+Alt+o          For replacing screen reader,
+Super+Alt+m          Toggle Magnifier,
+Super+Alt+b	         Say-Battery status,
+Super+Alt+w          restart wifi (for quick hotspot list updating),
+Super+Alt+j          Set screen brightness,
+Super+space   	     Change keyboard layout,
+Super+Ctrl+Right     Eject,
+Super+Ctrl+Left      Eject try-close,
+Super+Alt+pagedown   Screen off,
+Super+Alt+pageup     Screen on.
+Super+Alt+end        Touch-pad Off,
+Super+Alt+Home	     Touch-pad On.
+Alt+Ctrl+Delete      For shutdown or restart the system.
+Alt+Ctrl+F1, then Alt+Ctrl+Delete For restarting system any state.
+
+Super+Tab            Switch bitween panels and desktop.
+
+Alt+Super+L          Linux-Intelligent-OCR-Solution (Lios)
+Alt+Super+D          Take screenshot and ocr it using Lios
+Alt+Super+F          Firefox web browser
+Super+I		         IBus-braille On.
+Super+Alt+I	         IBus-braille Off.

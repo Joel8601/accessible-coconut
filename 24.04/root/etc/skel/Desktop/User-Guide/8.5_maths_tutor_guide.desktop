@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=9 Maths-Tutor user guide
+Comment=User-Guide
+Icon=/usr/share/maths-tutor/icon.png
+Exec=firefox /usr/share/maths-tutor/user-manual.html
+Terminal=false
+Type=Application

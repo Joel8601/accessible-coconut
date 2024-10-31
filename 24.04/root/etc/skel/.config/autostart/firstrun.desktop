@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "~/firstrun.sh"
+Hidden=false
+Name=Firstrun
+Comment=Firstrun script for configuring user settings and volume 
+X-MATE-Autostart-Delay=0
+Name[en_IN]=firstrun.desktop

@@ -1,0 +1,182 @@
+Installer guide for Accessible-Coconut 22.04.
+
+The installation process is fully accessible to a visually challenged user. 
+
+Before you start, please note down carefully the partitions on your hard disk, 
+their sizes and the operating systems residing on them. You will need at least 
+15 GB disk space to install the Accessible-Coconut. If it is not there, 
+you will have to delete or resize an existing partition to free the required disk space. 
+So decide in advance which partitions you could delete or resize.
+Also notes for installing in UEFI enabled systems is given at the end of this guide.
+
+Following are the major activities needed for installation 
+1 Downloading Accessible-Coconut,
+2 Creating a Bootable USB Flash Drive (Thumb Drive, Memory Stick, Pendrive),
+3 Booting to Accessible-Coconut live mode using the Flash Drive,
+4 Installing the Accessible-Coconut operating system,
+5 Restart and remove the Flash Drive.
+
+
+Activity 1: Downloading Accessible-Coconut.
+
+To download latest version use the link: https://sourceforge.net/projects/accessible-coconut/files/latest/download
+
+To download a specific version, visit the SourceForge page, navigate to the folder named after the desired version, 
+and proceed with the download. SourceForge page: https://sourceforge.net/projects/accessible-coconut/files/
+
+Activity 2: Creating a Bootable USB Flash Drive (Thumb Drive, Memory Stick, Pendrive).
+
+To make bootable Flash Drive you need following things
+1. A flash drive with a minimum capacity of 8 GB (will be formatted).
+2. Accessible-Coconut ISO image.
+3. Software for installing ISO image to Flash Drive.
+
+Here are some popular software options that can help install Accessible-Coconut to a Flash Drive.
+
+1. balena Etcher: Available for Windows, GNU/Linux and MacOS. 
+Download link: https://etcher.balena.io/#download-etcher
+
+2. Startup Disk Creator: Available for Ubuntu flavors and Accessible-Coconut only.
+sudo apt-get install usb-creator-gtk
+
+3. USB Image Writer: Available in Linux Mint and Accessible-Coconut.
+
+4. Rufus: Available for windows only.
+download link: https://rufus.ie/en/
+
+5. UNetbootin: available for Windows, GNU/Linux and MacOS. 
+Download link: https://unetbootin.github.io
+
+Now, do the following with any of the above listed software. 
+Note that the USB stick will be formatted during this process. 
+
+Step 1: Launch the application.
+Step 2: Insert your USB stick and remove any other USB storage medium for safety.
+The software will update to set the device within the Device field.
+If the Device selected is incorrect (perhaps you have multiple USB storage devices),
+select the correct one from the device field’s drop-down menu.
+
+Step 3: Choose the downloaded ISO image file of Accessible-Coconut.
+Step 4: Select Start.
+Step 5: Enter system password if prompted.
+Step 6: Wait until the process is completed.
+
+
+Activity 3: Booting to Accessible-Coconut live mode using the Flash Drive.
+
+To install, let us understand that there are two types of installations: one with 
+UEFI mode enabled and the other with Legacy mode. Most modern computers, especially 
+those running Windows 8 and later versions, are installed in UEFI mode, while Windows 7 
+and earlier versions are generally installed in Legacy mode. If the computer is 
+installed in UEFI mode, we should boot and install Accessible-Coconut in the same mode; 
+likewise for Legacy mode. Attempting installation in the other mode will result in 
+the operating system being installed but not detected by the computer.
+
+Insert the Installation medium (Bootable Flash Drive) and restart the computer. 
+For a visually impaired he/she may change the BIOS option to boot from Flash Drive in advance. 
+If one has not done so in advance, seek the help of a sighted guide for the following. 
+Looking at the screen a message indicating the button for entering boot options 
+menu will be displayed at the top or bottom. The button may vary from system to system. 
+It may be Del or F2 or F9 or F12. Keep pressing the appropriate button while the system is starting. 
+This will bring up the boot options menu. Select the option to boot from the Flash Drive and press Enter. 
+Here, one should select the Flash Drive with 'UEFI' in brackets if the previous operating system 
+is installed in UEFI mode. If your computer is already configured to boot from Flash Drive 
+when one is loaded, this step is not required.
+
+Note 1: In the BIOS, adjust the boot order by selecting items using the arrow keys. 
+Use F5, F6, or the plus (+) and minus (-) keys to move items accordingly.
+
+Note 2: If your Flash Drive is not listed in boot priority list check the Hard disk priority.
+
+Note 3: In UEFI-enabled systems, accessing the BIOS or boot options by pressing keys is not possible. 
+Details on how this can be achieved are provided at the end of this document.
+
+Activity 4: Installing the Accessible-Coconut operating system.
+
+Step 1: After the Accessible-Coconut is in live mode and also welcome to orca is heard, 
+one should press installer launcher on the desktop. 
+
+Step 2: Now, on the first page, the default language is English. If necessary, 
+change the language, and finally, press the 'Continue' button.
+
+Step 3: The following page is for selecting the keyboard layout. If necessary, 
+change the layout, and finally, press the 'Continue' button.
+
+Step 4: The next page allows you to choose between a normal installation and a minimal installation. 
+You can opt for the minimal installation if you don't need all the software that comes with Accessible-Coconut.
+
+Step 5: On the next page, under 'Update and Other Software,' there is an option labeled 
+'Download updates while installing.' Do not check this option because the upstream version may or may not be accessible.
+
+Step 6: The most important step in the installation process is partitioning, during which you determine 
+the location on your hard disk where the Accessible-Coconut will be installed. There will appear 
+'Installation Type' page with three or more radio buttons from which one can choose how to install Accessible-Coconut. 
+One can navigate through these radio buttons by using up and down arrow.
+
+Option 1: Installing alongside Windows or an existing operating system is the simplest method. 
+This option installs Accessible-Coconut within the available free space or by shrinking existing partitions 
+to accommodate it. It's advisable to create a minimum of 30 GB of free space on the hard disk before 
+initiating the installation process to ensure smoother operation. This free space can be created using 
+Disk Manager for Windows or GParted for GNU/Linux. To duel boot Accessible-Coconut with Microsoft Windows 
+'Alongside Windows' option is recommended.
+
+Option 2: 'Erase and Use the Entire Disk' is also straightforward, but BEWARE: THIS WILL DELETE ALL 
+EXISTING OPERATING SYSTEMS, APPLICATIONS, AND DATA FROM YOUR HARD DISK. It will create a single partition 
+occupying the entire disk and will install Accessible-Coconut.
+
+Option 3: 'Erase Ubuntu and Reinstall' will delete existing Ubuntu and install Accessible-Coconut. 
+
+Option 4: To have enough control on the installation process, choose the last option namely 'Something else', 
+select the 'Continue' button, Then a table appears, to navigate through this table one can use arrow keys. 
+In the first column the 'Device' of the partition is shown and in the second column the 'Type' of each partition 
+and in the Fifth column the 'Size' of each partition and in the sixth column the 'used space' is shown and in 
+the seventh the 'Operating System' is shown. Select the partition to be deleted using the arrow key 
+and press the delete key so that free space will be created. 
+
+The minimum partition required for the installation process is the root partition. To create it, 
+select the free space and press Enter. This will bring up the 'Create New Partition' window. 
+Then, press Shift+Tab twice to reach the mount point. Press the Down Arrow key once, 
+and Orca will announce 'slash.' Now, Tab until you hear 'Okay,' and press Enter.
+
+If you're installing in UEFI mode, it's necessary to create a partition with the 
+type 'EFI System Partition' and a size of 100 MB. This can be done by selecting 
+'EFI System Partition' from the 'Use as' combobox in the 'Create New Partition' window.
+
+Step 7: Now the system is ready for installation. Press tab till you reach 'Install now' 
+button and press enter and the installation will start. 
+
+Please note that one can revert the installation process by selecting 'revert' 
+or 'back' button or quit the installation process entirely by selecting 'quit' button. 
+However once the 'Install now' button is selected the installation process will start.
+
+Step 8: The next page is for selecting the timezone. You can select the timezone by 
+typing the first few characters and then selecting the appropriate option.
+
+Step 9: On the 'Who Are You' page, enter your username, password, etc., and choose 
+to enable automatic login if you don't require a password prompt at startup.
+
+Activity 5: Restart and remove the Flash Drive.
+Installation may take ten to fifteen minutes, and the installer will prompt you to 
+restart the computer upon completion. Now, click the 'Restart Now' button, and after 
+one minute, remove the Flash Drive and press Enter to restart.
+
+
+Note 1: UEFI stands for Unified Extensible Firmware Interface.
+
+Note 2: Accessing the BIOS or boot options in UEFI-enabled Windows 8/10/11:
+So one has to do following steps
+Step 1: From windows, go to restart option and press Shift key and then Enter to restart.
+Step 2: From the next window select 'Troubleshoot' 
+Step 3: Select 'Advanced Options' 
+Step 4: Select 'UEFI Firmware Settings'
+Step 5: Select 'Restart' 
+Step 6: Now open Bios using Delete key, F2, F12 depends on system.
+Note that in some laptops, one has to hold the function key before pressing these keys.
+
+Note 3: Determining if the computer boots from the HDD/Flash Drive in UEFI mode or not:
+Method 1: If there are no BIOS shortcut hints and the system boots directly to Windows, 
+it indicates UEFI mode.
+Method 2: Confirm the existence of the '/sys/firmware/efi' directory in your 
+GNU/Linux system; its presence indicates UEFI mode.
+
+Note 4: If no partitions are listed, use 'Fixparts' located in the System Tools menu within the application menu.

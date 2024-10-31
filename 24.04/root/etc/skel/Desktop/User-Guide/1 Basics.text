@@ -1,0 +1,61 @@
+Applications Menu: This menu facilitates the opening of any installed application. 
+Upon hearing the Welcome tune and Orca announcing itself, you can press Alt+F1 to 
+access the Applications Menu. From here, navigate through menu items using the up 
+or down arrow. Categories include Universal Access, System Tools, Sound and Video, 
+Office, Internet, Graphics, Games, Education, etc. To access submenu items, 
+press the right arrow key, and to navigate through submenu items, use the up or 
+down arrow. For example, after pressing Alt+F1, use up or down arrow keys to move 
+to Sound and Video, then press the Right arrow key and navigate through the submenu. 
+You can quickly access any menu or submenu by pressing the first letter of the menu. 
+For instance, to reach Sound and Video, press Alt+F1, press the up arrow once, and 
+then press 'S' to select Sound and Video. If there are more than one menu starting 
+with same letter you will have to press the letter repeatedly to reach the desired 
+menu. To exit the Applications Menu, use the Escape key. 
+
+The easiest way to access any software is by pressing the left Windows(Super) key 
+and typing the first few letters of the application's name. Then, use the down arrow 
+to view all the applications starting with those letters. Press the Enter key to 
+open the desired application. For example, after pressing the Windows key, type 'f,' 
+and all software starting with 'f,' such as Firefox, will be listed in the dropdown.
+
+To close any opened application, use the key combination Alt+F4.
+
+Places Menu: This menu provides quick access to various locations on your computer.
+After navigating to the Applications Menu by pressing Alt+F1, use the right arrow 
+to access the Places Menu. Here, using the up or down arrows, you can browse through 
+your locations where your data is stored. The menu includes Home, Desktop, Documents, 
+Music, Pictures, Videos, Downloads, Computer, Partitions, and Recent Documents.
+The home directory serves as the primary location where data saved from applications 
+is stored. Subdirectories such as Desktop, Documents, Music, and Downloads can be found here. 
+After opening a location, you can create a new folder by pressing Ctrl+Shift+N. 
+To copy a folder or file, use Ctrl+C, and to paste it into another directory, use Ctrl+V. 
+To navigate to the Home directory, press Alt+Home, and to access the Desktop, press 
+Alt+Ctrl+D. If you're inside a folder, you can return by pressing the Backspace key.
+
+Shutdown, Restart and Log out the system: Press Alt+F1 and press Up arrow to go 
+to the Shutdown. Then press Enter twice to Shutdown the Computer. To restart the 
+Computer you can select the restart from shutdown window. Inorder to restart the 
+computer forcefully we can use the key combinations Alt+Ctrl+F1 and the then press 
+Alt+Ctrl+Delete. In order to forcefully logout from the current session, we can 
+press Alt+Ctrl+Backspace and the the system wil logout. Here select the user and 
+enter the password to login again.           
+
+Orca screen reader: One can toggle Orca on and off using Alt+Super+S. To force restart 
+orca screen reader, press Alt+Super+O, and to silence Orca, use Insert+S. Continuous 
+reading can be initiated with Numpad Plus(+), while Insert+H activates the Learn mode. 
+Press Escape to exit Learn mode. To access Orca preferences, press Insert+Space. 
+There are eight pages accessible with the Right and Left Arrow keys. Navigate within 
+a page using Tab. For changing the language, go to the Voice page, then Tab until you 
+reach the Person option. Use the Down Arrow to select the language, then press Enter 
+twice. Apply the changes with Alt+A, and confirm with Alt+O. Adjustments to speech pitch, 
+rate, and volume can be made using the sliders on the Voice page
+
+System Settings
+In the main menu we have the System tools menu and in the sub menu we have Administration, 
+Preferences, System Settings, System monitor CPU-X etc.
+
+Using CPU-X one can find out the hardware configuration of the computer. Here we have 
+separate pages for CPU, Motherboard, System, Graphics and Caches. To navigate through 
+pages use arrow keys and to move through the pages use Tab.
+
+For comprehensive video tutorials, explore https://www.youtube.com/@zendalona/videos

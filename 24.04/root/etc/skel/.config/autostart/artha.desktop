@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=artha &
+Hidden=false
+Name=Artha
+Comment=Offline English dictionary
+X-MATE-Autostart-Delay=0

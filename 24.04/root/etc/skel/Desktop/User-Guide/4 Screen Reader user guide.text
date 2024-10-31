@@ -1,0 +1,115 @@
+
+Toggle screen reader        : Super+Alt+s  
+For replacing screen reader : Super+Alt+o
+Toggle Magnifier            : Super+Alt+m
+
+Official user guide - https://help.gnome.org/users/orca/stable/
+
+Keyboard Layout
+
+Orca has two keyboard layouts: Desktop (i.e. with a numeric keypad) and Laptop. The layout you choose impacts which key is used as the Orca Modifier.
+
+    If you are using the Desktop layout, the Orca Modifier will be both Insert and KP_Insert, the latter being the same key as KP_0.
+
+    If you are using the Laptop layout, the default Orca Modifier will be CapsLock
+
+The layout also determines the keystrokes associated with a number of Orca's commands.
+Accessible-Coconut shipped with Desktop layout as default.
+
+Change Orca Preferences : Orca Modifier+Space.
+
+Changing Your Keyboard Layout
+    Get into the Orca Preferences dialog by pressing Orca Modifier+Space.
+    Move to the Keyboard Layout group of radio buttons.
+    Arrow to the desired layout.
+    Press the Apply button.
+
+Increase speech rate    : Orca Modifier+Up              
+Decrease speech rate    : Orca Modifier+Down            
+Increase speech pitch   : Orca Modifier+left            
+Decrease speech pitch   : Orca Modifier+right           
+Increase speech volume  : Orca Modifier+Home            
+Decrease speech volume  : Orca Modifier+End             
+
+
+Documents
+
+To read the contents of any document, use the application's built-in caret navigation mode. As you navigate within the text of the document, 
+Orca will present your new location. As a result, you are likely already familiar with how to read a document using Orca. For instance:
+
+    Use Left and Right to move and read by character.
+    Use Ctrl+Left and Ctrl+Right to move and read by word.
+    Use Up and Down to move and read by line.
+    Use Shift in combination with the above commands to select and unselect text.
+
+
+Reading Commands
+
+In addition to the caret navigation commands which are part of GNOME, Orca provides a number of commands which you can use to read a document.
+
+Below you will see several references to "KP". All "KP" keys are located on the numeric keypad. 
+You will also notice that there are different keystrokes depending upon whether you are using a desktop or a laptop -- or more accurately, 
+whether you are using Orca's Desktop keyboard layout or its Laptop keyboard layout. 
+For additional information, please see the Keyboard Layout topic.
+
+
+The following Orca Flat Review Commands can be used to read your current location:
+    Read the current line:
+        Desktop: KP 8
+        Laptop: Orca Modifier+I
+    Read the current word:
+        Desktop: KP 5
+        Laptop: Orca Modifier+K
+    Spell the current word:
+        Desktop: KP 5 (double-clicked)
+        Laptop: Orca Modifier+K (double-clicked)
+    Phonetically spell the current word:
+        Desktop: KP 5 (triple-clicked)
+        Laptop: Orca Modifier+K (triple-clicked)
+    Read the current character:
+        Desktop: KP 2
+        Laptop: Orca Modifier+Comma
+    Phonetically speak the current character:
+        Desktop: KP 2 (double-clicked)
+        Laptop: Orca Modifier+Comma (double-clicked)
+    Speak the Unicode value of current character:
+        Desktop: KP 2 (triple-clicked)
+        Laptop: Orca Modifier+Comma (triple-clicked)
+
+Say All
+Orca's Say All command will cause Orca to speak the entire document beginning from your current location.
+    Desktop: KP Plus
+    Laptop: Orca Modifier+Semicolon
+
+Text Attributes and Selected Text
+    Orca has a dedicated command for obtaining the attributes of the text at the caret location. In addition, 
+    if you use Orca's Where Am I commands from within a text object in which text has been selected, 
+    Orca will announce the selected text. Orca's command to speak the current selection will also perform this function in a text object.
+
+    Present the text attributes: Orca Modifier+F
+    Perform basic Where Am I:
+        Desktop: KP Enter
+        Laptop: Orca Modifier+Return
+    Perform detailed Where Am I:
+        Desktop: KP Enter (double-clicked)
+        Laptop: Orca Modifier+Return (double-clicked)
+    Speak current selection: Orca Modifier+Shift+Up
+
+
+
+Learn Mode
+
+In Learn Mode, Orca will announce each keystroke you pressed along with any associated Orca command that keystroke is bound to. In this mode, you can also get a list of shortcuts containing all the Orca commands you can use.
+Using Learn Mode
+    Get into Learn Mode by pressing Orca Modifier+H.
+    Press any key or keystroke. Orca will announce the keys and any associated command.
+    Press Esc to exit Learn Mode.
+
+Getting a List of Shortcuts
+    Get into Learn Mode by pressing Orca Modifier+H.
+    Press F2 if you want a list of shortcuts that apply Orca-wide, or press F3 if you want a list of shortcuts that are specifically for the application with focus.
+    Press Up or Down to examine the contents of the list.
+    Press Esc to exit the list.
+
+
+

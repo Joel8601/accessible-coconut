@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Exec=canberra-gtk-play -f /usr/share/Coconut/startup.ogg
+Hidden=false
+Name=Login-Sound
+Comment=Play Login-Sound
+X-MATE-Autostart-Delay=0

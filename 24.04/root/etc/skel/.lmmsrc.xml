@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE lmms-config-file>
+<lmms version="1.2.2">
+  <MidiAlsaRaw device="default"/>
+  <MidiJack device="lmms"/>
+  <Midialsaseq device="default"/>
+  <app openlastproject="0" configured="1" nommpz="0" nanhandler="1" language="en" nomsgaftersetup="0" disablebackup="0" displaydbfs="0"/>
+  <audioalsa channels="2" device="null"/>
+  <audiojack clientname="lmms" channels="2"/>
+  <audiooss channels="2" device="/dev/dsp"/>
+  <audiopa channels="2" device="default"/>
+  <audioportaudio backend="" device=""/>
+  <audiosdl device=""/>
+  <audiosndio channels="2" device=""/>
+  <audiosoundio backend="PulseAudio" out_device_id="alsa_output.pci-0000_00_14.2.analog-stereo" out_device_raw="no"/>
+  <midioss device="/dev/midi"/>
+  <mixer hqaudio="0" mididev="ALSA-Sequencer (Advanced Linux Sound Architecture)" audiodev="SDL (Simple DirectMedia Layer)" framesperaudiobuffer="256"/>
+  <paths sf2dir="/home/UUSSEERR/Documents/lmms/samples/soundfonts/" workingdir="/home/UUSSEERR/Documents/lmms/" gigdir="/home/UUSSEERR/Documents/lmms/samples/gig/" stkdir="/usr/share/stk/rawwaves/" laddir="/home/UUSSEERR/Documents/lmms/plugins/ladspa/" vstdir="/home/UUSSEERR/Documents/lmms/plugins/vst/" artwork="data:/themes/default/" defaultsf2="" backgroundartwork=""/>
+  <tooltips disabled="0"/>
+  <ui enableautosave="1" displaywaveform="0" enablerunningautosave="0" syncvstplugins="1" vstembedmethod="xembed" printnotelabels="0" saveinterval="2" smoothscroll="0" oneinstrumenttrackwindow="0" animateafp="1" compacttrackbuttons="0" disableautoquit="1" vstalwaysontop="0"/>
+  <recentfiles>
+    <file path="/usr/share/Coconut/Lmms.mmpz"/>
+    <file path="data:/projects/templates/default.mpt"/>
+  </recentfiles>
+</lmms>
