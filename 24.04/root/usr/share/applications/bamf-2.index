@@ -1,0 +1,170 @@
+org.gnome.seahorse.Application.desktop	seahorse %u			false
+yelp.desktop	yelp %u		GNOME;Unity;	false
+zynaddsubfx-jack-multi.desktop	zynaddsubfx -I jack -O jack-multi			false
+caja.desktop	/usr/bin/caja		MATE;	true
+org.gnome.Maps.desktop	gapplication launch org.gnome.Maps %U			false
+mate-default-applications-properties.desktop	mate-default-applications-properties		MATE;	false
+mate-notification-properties.desktop	mate-notification-properties		MATE;	false
+libreoffice-math.desktop	libreoffice --math %U	libreoffice-math		false
+marco.desktop	marco			true
+brasero.desktop	brasero %U			false
+tilda.desktop	/usr/bin/tilda			false
+org.kde.keditbookmarks.desktop	keditbookmarks			true
+org.gnome.Shotwell.desktop	shotwell %U			false
+system-config-printer.desktop	system-config-printer			false
+org.gnome.Shotwell.Auth.desktop	/usr/libexec/shotwell/shotwell-authenticator %u			true
+kcm_trash.desktop	kcmshell5 kcm_trash			true
+gcr-viewer.desktop	/usr/bin/gcr-viewer			true
+mate-tweak.desktop	mate-tweak		MATE;	false
+marco-xr_glx_hybrid.desktop	marco-xr_glx_hybrid			true
+display-im6.q16.desktop	/usr/bin/display-im6.q16 -nostdin %F			false
+mate-font-viewer.desktop	mate-font-viewer %u			false
+software-properties-livepatch.desktop	/usr/bin/software-properties-gtk --open-tab=6		GNOME;	true
+mate-window-properties.desktop	mate-window-properties		MATE;	false
+mate-about-me.desktop	mate-about-me		MATE;	false
+org.gnome.Evolution.desktop	evolution %U			false
+org.gtkhash.gtkhash.desktop	gtkhash %U			false
+mate-about.desktop	mate-about		MATE;	true
+libreoffice-startcenter.desktop	libreoffice %U	libreoffice-startcenter		false
+mate-color-select.desktop	mate-color-select		MATE;	false
+audacity.desktop	env GDK_BACKEND=x11 audacity %F	Audacity		false
+debian-xterm.desktop	xterm	XTerm		false
+caja-browser.desktop	/usr/bin/caja --no-desktop --browser %U		MATE;	false
+mate-panel.desktop	mate-panel		MATE;	true
+mate-display-properties.desktop	mate-display-properties		MATE;	false
+debian-uxterm.desktop	uxterm	UXTerm		false
+org.kde.kdeconnect.app.desktop	kdeconnect-app			false
+mate-terminal.desktop	mate-terminal			false
+mate-network-scheme.desktop	/usr/bin/caja --no-desktop network:		MATE;	true
+software-properties-gtk.desktop	software-properties-gtk			false
+hplj1020.desktop	/usr/share/foo2zjs/hplj10xx_gui.tcl			true
+plank-preferences.desktop	plank --preferences		MATE;	false
+mate-disk-image-mounter.desktop	mate-disk-image-mounter %U		MATE;	false
+mate-disk-usage-analyzer.desktop	mate-disk-usage-analyzer		MATE;	false
+links2.desktop	xlinks2			false
+audacious.desktop	audacious %U			false
+uget-gtk.desktop	env GDK_BACKEND=x11 uget-gtk %u			false
+mate-keybinding.desktop	mate-keybinding-properties		MATE;	false
+wheelmap-geo-handler.desktop	kde-geo-uri-handler --coordinate-template "https://wheelmap.org/?lat=<LAT>&lon=<LON>" --query-template "https://wheelmap.org/search?q=<Q>" --fallback "https://wheelmap.org" %u			true
+org.gnome.clocks.desktop	gnome-clocks			false
+mate-screenshot.desktop	mate-screenshot --interactive		MATE;	false
+rofi.desktop	rofi -show			false
+org.kde.kdeconnect.nonplasma.desktop	kdeconnect-indicator			false
+im-config.desktop	im-config		KDE;LXQt;	false
+org.gnome.Evolution-alarm-notify.desktop	/usr/libexec/evolution-data-server/evolution-alarm-notify			true
+onboard-settings.desktop	onboard-settings			false
+mate-session-properties.desktop	mate-session-properties		MATE;	false
+zynaddsubfx-jack.desktop	zynaddsubfx -I jack -O jack			false
+org.gnome.evolution-data-server.OAuth2-handler.desktop	/usr/libexec/evolution-data-server/evolution-oauth2-handler %u			true
+lmms.desktop	lmms %f			false
+fr.handbrake.ghb.desktop	ghb %f			false
+onboard.desktop	onboard			false
+geoclue-demo-agent.desktop	/usr/libexec/geoclue-2.0/demos/agent			true
+nm-connection-editor.desktop	nm-connection-editor			false
+mate-system-log.desktop	mate-system-log		MATE;	false
+pidgin.desktop	pidgin			false
+gnome-disk-image-mounter.desktop	gnome-disk-image-mounter %U			true
+ktelnetservice5.desktop	ktelnetservice5 %u			true
+mate-calc.desktop	mate-calc			false
+mate-seahorse-pgp-signature.desktop	mate-seahorse-tool --verify %U			true
+mate-network-properties.desktop	mate-network-properties		MATE;	false
+org.kde.kdeconnect.daemon.desktop	/usr/lib/x86_64-linux-gnu/libexec/kdeconnectd			true
+smplayer.desktop	smplayer %U			false
+caja-home.desktop	/usr/bin/caja --no-desktop		MATE;	true
+redshift-gtk.desktop	redshift-gtk			false
+smplayer_enqueue.desktop	smplayer -add-to-playlist %U			true
+org.kde.kdeconnect.sms.desktop	kdeconnect-sms			false
+org.gnome.DiskUtility.desktop	gnome-disks			false
+info.desktop	info			false
+qwant-maps-geo-handler.desktop	kde-geo-uri-handler --coordinate-template "https://www.qwant.com/maps/#map=<Z>/<LAT>/<LON>" --query-template "https://www.qwant.com/maps/?q=<Q>&client=opensearch" --fallback "https://www.qwant.com/maps/" %u			true
+mate-time-admin.desktop	mate-time-admin		MATE;	false
+blueman-adapters.desktop	blueman-adapters		XFCE;MATE;	false
+marco-xrender.desktop	marco-xrender			true
+python3.12.desktop	/usr/bin/python3.12			true
+mate-search-tool.desktop	mate-search-tool		MATE;	false
+mate-seahorse-pgp-encrypted.desktop	mate-seahorse-tool --decrypt %U			true
+org.gnome.Weather.desktop	gapplication launch org.gnome.Weather			false
+mate-power-statistics.desktop	mate-power-statistics		MATE;	false
+google-maps-geo-handler.desktop	kde-geo-uri-handler --coordinate-template "https://www.google.com/maps/@<LAT>,<LON>,<Z>z" --query-template "https://www.google.com/maps/search/<Q>" --fallback "https://www.google.com/maps/" %u			true
+org.gnome.Zenity.desktop	zenity			true
+mate-theme-installer.desktop	mate-appearance-properties -i %u		MATE;	true
+nm-applet.desktop	nm-applet			true
+libreoffice-xsltfilter.desktop	libreoffice %U			true
+redshift.desktop	redshift			true
+daisy-player.desktop	daisy-player %f			true
+gparted.desktop	/usr/sbin/gparted %f			false
+simple-scan.desktop	simple-scan			false
+org.gnome.DejaDup.desktop	deja-dup %u			false
+caja-folder-handler.desktop	/usr/bin/caja --no-desktop %U		MATE;	true
+usb-creator-gtk.desktop	usb-creator-gtk			false
+matecc.desktop	mate-control-center		MATE;	false
+rofi-theme-selector.desktop	rofi-theme-selector			false
+gelemental.desktop	gelemental			false
+gcr-prompter.desktop	/usr/libexec/gcr-prompter			true
+magnus.desktop	magnus			false
+vim.desktop	vim %F			false
+htop.desktop	htop			false
+ebook-speaker.desktop	ebook-speaker %f			false
+io.snapcraft.SessionAgent.desktop	/bin/false			true
+apturl.desktop	apturl %u			true
+hud-settings.desktop	/usr/lib/mate-hud/hud-settings.py			false
+ayatana-settings.desktop	/usr/bin/ayatana-settings			false
+snap-handle-link.desktop	/usr/bin/snap handle-link %U			true
+marco-glx.desktop	marco-glx			true
+xdg-desktop-portal-gtk.desktop	/usr/libexec/xdg-desktop-portal-gtk			true
+caja-autorun-software.desktop	/usr/bin/caja-autorun-software %u			true
+blueman-manager.desktop	blueman-manager			false
+mozo.desktop	mozo		MATE;	false
+atril.desktop	atril %U			false
+gufw.desktop	gufw			false
+io.github.thetumultuousunicornofdarkness.cpu-x.desktop	cpu-x			false
+mate-at-properties.desktop	mate-at-properties		MATE;	false
+ubuntu-mate-guide.desktop	yelp help:ubuntu-mate-guide			false
+artha.desktop	artha			false
+libreoffice-writer.desktop	libreoffice --writer %U	libreoffice-writer		false
+tilda-dbus.desktop	/usr/bin/tilda --dbus			false
+mate-user-guide.desktop	yelp help:mate-user-guide		MATE;	false
+gucharmap.desktop	gucharmap			false
+grub-customizer.desktop	grub-customizer			false
+gimp.desktop	gimp-2.10 %U			false
+eom.desktop	eom %U			false
+gnome-language-selector.desktop	/usr/bin/gnome-language-selector			false
+libreoffice-calc.desktop	libreoffice --calc %U	libreoffice-calc		false
+synaptic.desktop	synaptic-pkexec	synaptic		false
+libreoffice-draw.desktop	libreoffice --draw %U	libreoffice-draw		false
+orca.desktop	orca --replace		MATE;	false
+marco-no-composite.desktop	marco --no-composite			true
+org.gnome.gedit.desktop	gedit %U			false
+mate-power-preferences.desktop	mate-power-preferences		MATE;	false
+caja-file-management-properties.desktop	/usr/bin/caja-file-management-properties		MATE;	false
+pluma.desktop	pluma %U			false
+libreoffice-impress.desktop	libreoffice --impress %U	libreoffice-impress		false
+org.kde.kdeconnect-settings.desktop	kdeconnect-settings			false
+org.kde.kwalletd5.desktop	kwalletd5			true
+mate-appearance-properties.desktop	mate-appearance-properties %F		MATE;	false
+chromium-browser.desktop	chromium-browser %U			false
+gdebi.desktop	gdebi-gtk %f			false
+mate-user-admin.desktop	mate-user-admin		MATE;	false
+mate-settings-mouse.desktop	mate-mouse-properties		MATE;	false
+picom.desktop	picom			false
+mate-system-monitor.desktop	mate-system-monitor		MATE;	false
+zynaddsubfx-oss.desktop	zynaddsubfx -I OSS -O OSS			false
+transmission-gtk.desktop	transmission-gtk %U			false
+software-properties-drivers.desktop	/usr/bin/software-properties-gtk --open-tab=4			false
+engrampa.desktop	engrampa %U			false
+mate-seahorse-pgp-keys.desktop	mate-seahorse-tool --import %U			true
+mate-screensaver-preferences.desktop	mate-screensaver-preferences		MATE;	false
+mate-volume-control.desktop	mate-volume-control		MATE;	false
+vlc.desktop	/usr/bin/vlc --started-from-file %U			false
+zynaddsubfx-alsa.desktop	zynaddsubfx -I alsa -O alsa			false
+org.gnome.Shotwell-Viewer.desktop	shotwell %f			true
+plank.desktop	plank			false
+org.kde.kdeconnect.handler.desktop	kdeconnect-handler %U			true
+kcm_kdeconnect.desktop	systemsettings kcm_kdeconnect			true
+mate-keyboard.desktop	mate-keyboard-properties		MATE;	false
+mate-dictionary.desktop	mate-dictionary		MATE;	false
+org.mate-desktop.mate-eiciel.desktop	/usr/bin/mate-eiciel			false
+openstreetmap-geo-handler.desktop	kde-geo-uri-handler --coordinate-template "https://www.openstreetmap.org/#map=<Z>/<LAT>/<LON>" --query-template "https://www.openstreetmap.org/search?query=<Q>" --fallback "https://www.openstreetmap.org" %u			true
+caja-computer.desktop	/usr/bin/caja --no-desktop computer:		MATE;	true
+mpv.desktop	mpv --player-operation-mode=pseudo-gui -- %U	mpv		false
+gnome-disk-image-writer.desktop	gnome-disks --restore-disk-image %U			true

@@ -1,0 +1,2 @@
+pkill orca
+orca --replace

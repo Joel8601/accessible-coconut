@@ -1,0 +1,38 @@
+# SPDX-License-Identifier: CC-BY-SA-4.0
+# SPDX-FileCopyrightText: Michael Terry
+
+[Desktop Entry]
+Name=Backups
+Comment=Protect yourself from data loss
+X-Ubuntu-Gettext-Domain=deja-dup
+
+Icon=org.gnome.DejaDup
+
+Exec=deja-dup %u
+
+StartupNotify=true
+DBusActivatable=true
+
+# Switch this to SingleMainWindow once xdg-desktop-utils 0.27 is released & in the SDK
+X-GNOME-SingleWindow=true
+
+Type=Application
+
+# keep in sync with metainfo file
+Categories=Utility;Archiving;GNOME;GTK;X-GNOME-Utilities;
+
+# Used for oauth flows (server redirects to this custom scheme and we catch it)
+MimeType=x-scheme-handler/com.googleusercontent.apps.916137916439-evn6skqan91m96fmsskk8102e3iepv22;x-scheme-handler/msal5291592c-3c09-44fb-a275-5027aa238645;
+
+# Translators: Add whatever keywords you want in your language, separated by semicolons
+# These keywords are used when searching for applications in dashes, etc.
+Keywords=déjà;deja;dup;
+
+X-GNOME-UsesNotifications=true
+X-Purism-FormFactor=Workstation;Mobile;
+
+Actions=backup;
+
+[Desktop Action backup]
+Name=Back Up
+Exec=deja-dup --backup

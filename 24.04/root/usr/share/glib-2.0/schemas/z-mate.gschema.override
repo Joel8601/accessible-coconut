@@ -1,0 +1,95 @@
+
+############# For Mate Desktop #####################
+
+# Screen Reader
+[org.gnome.desktop.a11y.applications]
+screen-reader-enabled=true
+
+# Hide system menu from menubar 
+[org.mate.panel.menubar]
+show-desktop=false
+
+# Set trash icon visible
+[org.mate.caja.desktop]
+trash-icon-visible=true
+
+# Disable mate lock screen 
+[org.mate.screensaver]
+lock-enabled=false
+
+# Set sound preview off
+[org.mate.caja.preferences]
+preview-sound='never'
+
+# set walpaper	
+[org.mate.background]
+picture-filename='/usr/share/Coconut/Desktop.jpg'
+picture-options='stretched'
+
+
+[org.ArcticaProject.arctica-greeter]
+background='/usr/share/Coconut/grub.png'
+screen-reader=true
+
+
+
+# Theme
+[org.mate.interface]
+gtk-theme='Ambiant-MATE-Dark'
+icon-theme='Yaru-viridian-dark'
+
+[org.mate.Marco.general]
+theme='Ambiant-MATE-Dark'
+
+[org.mate.Marco.global-keybindings]
+switch-panels='<Mod4>Tab'
+
+# Mate shortcuts
+[org.mate.SettingsDaemon.plugins.media-keys]
+volume-down='<Alt><Mod4>Down'
+volume-up='<Alt><Mod4>Up'
+volume-mute='<Alt><Mod4>7'
+home='<Mod4>Home'
+power='<Primary><Alt>Delete'
+www='<Alt><Mod4>f'
+
+
+# Custom shortcuts
+[org.mate.Marco.global-keybindings]
+run-command-1='<Alt><Mod4>o'
+run-command-2='<Alt><Mod4>Page_Up'
+run-command-3='<Alt><Mod4>Page_Down'
+run-command-4='<Alt><Mod4>Home'
+run-command-5='<Alt><Mod4>End'
+run-command-6='<Primary><Mod4>Right'
+run-command-7='<Primary><Mod4>Left'
+run-command-8='<Alt><Mod4>b'
+run-command-9='<Alt><Mod4>l'
+run-command-10='<Mod4>i'
+run-command-12='<Alt><Mod4>i'
+
+run-command-13='<Alt><Mod4>w'
+run-command-14='<Alt><Mod4>j'
+run-command-15='<Alt><Mod4>d'
+
+[org.mate.Marco.keybinding-commands]
+command-1='sh /usr/share/Coconut/replace_orca.sh'
+command-2='sh /usr/share/Coconut/screen_on.sh'
+command-3='sh /usr/share/Coconut/screen_off.sh'
+command-4='sh /usr/share/Coconut/touchpad-on.sh'
+command-5='sh /usr/share/Coconut/touchpad-off.sh'
+command-6='eject'
+command-7='eject --trayclose'
+command-8='sh /usr/share/Coconut/acpi.sh'
+command-9='lios'
+command-10='sh /usr/share/Coconut/ibus-braille-start.sh'
+command-12='sh /usr/share/Coconut/ibus-braille-stop.sh'
+
+# added after adding entrys in org.mate.marco.gschema.xml
+command-13='sh /usr/share/Coconut/wifi_restart.sh'
+command-14='sh /usr/share/Coconut/set_brightness.sh'
+command-15='lios --ocr-screenshot'
+
+# set shortcut for switch bitween keyboard layouts
+[org.mate.peripherals-keyboard-xkb.kbd]
+options=['grp\tgrp:win_space_toggle','terminate\tterminate:ctrl_alt_bksp']

@@ -1,0 +1,595 @@
+Version Accessible-Coconut-22.04.3
+
+Note : This version of GNU/Linux distribution is not for sale. However 
+charges for installation, maintenance and training is deserving.
+
+Website : https://zendalona.com/
+Home Page : https://zendalona.com/accessible-coconut/
+Maintainer email id : nalin.x.linux@gmail.com
+Our mailing list : accessible-coconut@googlegroups.com
+You can join this group via sending an email to accessible-coconut+subscribe@googlegroups.com
+Telegram group link : http://www.telegram.me/accessible_coconut
+
+
+###### Remaster Requirments ########
+1 System with good configuration having minimum 4 core processor,
+2 Free Space 20GB,
+3 ISO Image of official Ubuntu Mate Operating System,
+4 VirtualBox or VMware Workstation for Testing,
+5 Cubic
+
+####  Install cubic from PPA
+
+# sudo apt-add-repository universe
+# sudo apt-add-repository ppa:cubic-wizard/release
+# sudo apt update
+# sudo apt install --no-install-recommends cubic
+
+
+################# Remaster Routines #############################################
+1 Update version and date in cubic interface
+2 Update remaster log and version in /usr/share/Coconut/customization_details.text
+3 apt-get clean from chroot
+4 Remove orphanes using apt-get purge $(deborphan)
+5 Update coco-patcher
+6 Update boot/grub/grub.cfg
+
+#### Warning : Add amd64 with filename 
+#### Warning : Do not use hiphen in "Volume Id" field
+#### Warning : Always fill Release Name Completely like "Accessible-Coconut 18.04 LTS "Bionic Beaver" - Release amd64 (20180903)"
+
+
+############### list of packages that requires care while updating ( Package - Reason ) ##############
+firefox* - a11y
+libreoffice* - a11y
+gnome-session-canberra - login sound patch
+chromium - a11y & launcher customization
+ubiquity-ubuntu-artwork - AC logos
+ubiquity-slideshow-ubuntu-mate - customization
+plymouth-theme-ubuntu-mate-text - customization
+plymouth-theme-ubuntu-mate-logo - customization
+plymouth plymouth-label - customization
+plymouth-theme-spinner - customization
+plymouth-theme-ubuntu-text  - customization
+yaru-theme-icon - installer icon and main menu icon
+
+
+
+
+################ Steps done in each customization of Accessible-Coconut ##############################################################
+
+################ Version - 3 ####################################
+
+### System upgraded ####
+apt-mark hold plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo plymouth-theme-ubuntu-text
+apt-mark hold firefox* libreoffice* chromium-browser chromium-browser-l10n
+apt-mark hold ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+apt-mark hold gnome-session-canberra yaru-theme-icon
+
+apt-get upgrade
+
+apt-mark unhold plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo plymouth-theme-ubuntu-text
+apt-mark unhold firefox* libreoffice* chromium-browser chromium-browser-l10n
+apt-mark unhold ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+apt-mark unhold gnome-session-canberra yaru-theme-icon
+
+### Installed libpurple-telegram-tdlib #### 
+# Telegram-purple removed
+
+# Installed following packages 
+libpurple-telegram-tdlib_0.8.1-1_amd64 installed 
+libssl1.1_1.1.1f-1ubuntu2_amd64.deb
+libwebp6_0.6.1-2.1+deb11u2_amd64.deb
+
+https://github.com/ars3niy/tdlib-purple?tab=readme-ov-file
+
+### Snakes and ladders installed ###
+add-apt-repository ppa:nalin-x-linux/snakes-and-ladders
+apt-get install snakes-and-ladders
+
+### Maths-Tutor installed ###
+add-apt-repository ppa:nalin-x-linux/maths-tutor
+apt-get install maths-tutor
+
+### Coco-Patcher Updated ### 
+# Following scripts added
+1 fix-bluetooth-microphone.sh
+2 install-or-update-maths-tutor.sh
+3 install-or-update-snakes-and-ladders.sh
+# Script to update Orca fixed.
+
+### eBook-speaker fixed ###
+# script /usr/share/Coconut/ebook-speaker.sh updated
+Updated to add user to 'audio' group
+Changed command espeak-ng -> espeak
+
+### Files in User-Guide folder updated ###
+# SBW Guide launcher fixed
+# Visit Zendalona launcher icon updated
+# Slideshow launcher removed due to accessibility issues
+# Added launcher to Watch Video Tutorials
+# Added launcher to Maths-Tutor user guide
+# 1 Basics.text guide updated
+# 2 Installation.text guide updated
+# 3 Keyboard Shortcuts.text updated
+# 5 Installed Applications.text updated
+
+### Installation slideshow get help links updated ### 
+Edited /usr/share/ubiquity-slideshow/slides/16_gethelp.html
+
+################ Version - 2 ####################################
+
+### Security and recommended updates installed
+See the description in section "Customizing Tips and Tricks"
+
+### Fenrir 1.9.5-5 installed 
+package downloaded from https://launchpad.net/ubuntu/+source/fenrir
+
+### Mate-User-Manager 1.7 installed 
+packages group-service_1.3.0-3_amd64.deb  libgroup-service1_1.3.0-3_amd64.deb  mate-user-admin_1.7.0-1_amd64.deb downloaded from ubuntu repository 
+
+### Launchers inside User-Guide marked as trusted
+Following line added to /etc/skel/firstrun.sh
+for i in ~/Desktop/User-Guide/*.desktop; do gio set "$i" "metadata::caja-trusted-launcher" true ;done
+
+### Disabled downloading updates while installing
+following line added to ubuntu-mate.seed
+ 
+ubiquity ubiquity/download_updates boolean false
+
+### Replaced applications installed via snap with native debian packages
+
+# Removing snap 
+apt autoremove --purge snapd
+apt remove zsys
+
+# Firefox installed  
+add-apt-repository ppa:mozillateam/ppa
+
+echo '
+Package: *
+Pin: release o=LP-PPA-mozillateam
+Pin-Priority: 1001
+' | tee /etc/apt/preferences.d/mozilla-firefox
+
+apt install firefox
+
+# Firefox launcher fixed (conflict with /usr/share/mate/applications/firefox.desktop)
+cp /usr/share/applications/firefox.desktop /usr/local/share/applications/Firefox.desktop
+
+# Installing snap daemon
+apt-get install snapd
+
+
+### Chromium replaced with Rob Savoury PPA version
+apt-get remove chromium chromium-common
+
+add-apt-repository ppa:savoury1/chromium
+apt-get install chromium-browser
+
+
+### Desktop and login screen wallpaper updated for Accessibility
+
+### Ambiant-MATE theme installed
+add-apt-repository ppa:lah7/ambiant-mate
+apt-get install ambiant-mate-gtk-themes
+
+following lines in glib schema file z-mate.gschema.override updated 
+
+# Theme
+[org.mate.interface]
+gtk-theme='Ambiant-MATE-Dark'
+icon-theme='Yaru-viridian-dark'
+
+[org.mate.Marco.general]
+theme='Ambiant-MATE-Dark'
+
+# schemas compiled using following command
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+### Localization related packages removed from auto-removal list
+Following packages removed from /custom-disk/casper/filesystem.manifest-remove
+
+libreoffice-help-*
+libreoffice-l10n*
+mythes-*
+language-pack*
+hyphen-*
+hunspell-*
+wbrazilian wbritish wfrench witalian wngerman wogerman wportuguese wspanish wswiss
+
+################ Version - 1 ####################################
+
+### Sharada-Braille-Writer auto-new-line disabled  
+preferences added to /etc/skel 
+echo-by-word enabled in orca preferences
+
+### LibreOffice downgraded to 7.0.6.2 for IBus-Braill compatibility 
+package downloaded from https://downloadarchive.documentfoundation.org/libreoffice/old/
+
+### Grub Customizer added
+add-apt-repository ppa:danielrichter2007/grub-customizer
+apt-get install grub-customizer
+
+### xapp module installed 
+sudo apt install xapp
+
+
+################ Version - 1 beta ####################################
+
+### System updated ###
+apt-get update 
+apt-get upgrade
+
+### Applications installed from repository 
+apt-get install synaptic gdebi acpi artha audacious audacity festival gnuchess phalanx gparted lame mpg321 p7zip smplayer vlc pidgin gelemental xbacklight git-core brasero fairymax speech-dispatcher-festival speech-dispatcher-flite rhvoice speech-dispatcher-rhvoice pandoc libttspico-utils vco-plugins tap-plugins swh-plugins rev-plugins omins mcp-plugins links2 handbrake net-tools usb-creator-gtk lmms kdeconnect ssh telegram-purple xserver-xorg-input-synaptics uget preload gimp daisy-player ebook-speaker
+
+
+### Applications installed from PPA  
+
+add-apt-repository ppa:nalin-x-linux/lios -n 
+add-apt-repository ppa:nalin-x-linux/ibus-braille-and-sbw -n
+add-apt-repository ppa:nalin-x-linux/accessible-tuxtype-and-tuxmath -n
+add-apt-repository ppa:nalin-x-linux/xboard-accessible -n
+add-apt-repository ppa:nalin-x-linux/coco-patcher-jammy -n
+add-apt-repository ppa:nalin-x-linux/orca -n
+
+apt-get update
+
+apt-get install lios sharada-braille-writer ibus-braille tuxtype tuxmath xboard-accessible coco-patcher orca
+
+### Applications installed via deb packages  
+
+1 Avidemux Video Editor
+2 Curlew multimedia converter
+3 Chromium web browser
+
+
+### Coconut files 
+
+# scripts copied to /usr/share/Coconut 
+
+# launchers copied to /usr/local/share/applications
+
+# launcher database updated
+update-desktop-database
+
+
+# Walpaper and Grub background
+Image - No Logo ABST 279 - kdelook.org
+Font - Z003 Medium Italic
+Logo - Copied
+Size - 1920x1080
+GRUB Size - 1024x768
+
+# Login sound 
+Computer Startup Music - Freesounds - by Wricken
+
+
+
+### Automatic system update disabled by editing following files
+nano /etc/apt/apt.conf.d/10periodic 
+APT::Periodic::Update-Package-Lists "0";
+
+nano /etc/apt/apt.conf.d/20auto-upgrades 
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Unattended-Upgrade "0";
+
+#### Removed packages for apport crash report
+apt-get remove apport apport-gtk
+
+### Update-Manager removed
+apt-get remove update-manager-core
+
+### Celluloid and Rhymbox music player removed
+apt-get remove celluloid rhythmbox*
+
+### Webcamoid removed (not accessible)
+apt-get purge webcamoid webcamoid-data webcamoid-plugins
+
+### Alt+Ctrl+Backspace for logout
+dpkg-reconfigure keyboard-configuration
+
+### Disable preload by default
+# Checking preload status
+systemctl is-enabled preload
+systemctl disable preload
+
+
+#### Grub configuration 
+nano /etc/default/grub
+
+GRUB_INIT_TUNE="2000 400 4 0 1 500 4 0 1 600 4 0 1 800 6 0 1 800 8" 
+GRUB_BACKGROUND="/usr/share/Coconut/grub.png"
+
+### Microphone noise reduction script and launcher added
+script microphone_realtime_background_noise_reduction.sh copied to /home/linux/cubic-new/custom-root/usr/share/Coconut/
+launcher microphone_realtime_background_noise_reduction.desktop copied to /usr/local/share/applications/
+
+#### Coconut-slideshow added to User guide
+added custom-root/etc/skel/Desktop/User Guide/11 slideshow.desktop
+added /custom-root/usr/share/Coconut/slideshow.py
+ubiquity-slideshow-ubuntu-mate unchecked from autoremoval package list
+
+#### Gparted 
+gparted unchecked from autoremoval package list
+
+
+#### Schema edited and added to set various settings such as panel, background, etc
+
+# Edited /usr/share/glib-2.0/schemas/org.mate.marco.gschema.xml for adding additional shortcut entrys
+entrys added run-command-13, run-command-14, run-command-15, command-13, command-14, command-15
+
+# copied z-mate.gschema.override to /usr/share/glib-2.0/schemas 
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+#### Default menubar items and their positions defined 
+edited remaster/usr/share/mate-panel/layouts/familiar.layout
+
+# replace menu-bar entry with following
+
+[Object menu-bar]
+object-type=menu-bar
+toplevel-id=top
+position=0
+locked=true
+
+[Object briskmenu]
+object-type=applet
+applet-iid=BriskMenuFactory::BriskMenu
+toplevel-id=bottom
+position=0
+locked=true
+
+# added following lines to show-desktop
+position=15
+panel-right-stick=true
+
+#### Set Firefox as default web browser ( default xlinks2) 
+sudo update-alternatives --config x-www-browser
+
+
+
+#### XDG Mate customized menu 
+gedit /etc/xdg/menus/mate-applications.menu above <!--End Others --> add following 
+
+# Logout, Shutdown and Seperator 
+  <Include>
+    <Filename>shutdown.desktop</Filename>
+    <Filename>logout.desktop</Filename>
+  </Include>
+
+  <!-- Separator between menus and shutdown -->
+  <Layout>
+    <Merge type="menus"/>
+    <Merge type="files"/>
+    <Separator/>
+    <Filename>logout.desktop</Filename>
+    <Filename>shutdown.desktop</Filename>
+    <Separator/>
+  </Layout>
+
+# Above that add Terminal in accessories like follows
+    </And>
+      <Filename>mate-terminal.desktop</Filename>
+    </Include>
+  </Menu> <!-- End Accessories -->
+
+
+
+# Enabled Preferences and Administration in Mate System tools menu 
+Copied system tools section from /etc/xdg/menus/gnome-applications.menu
+
+#### Icons for main menu
+/cubic/custom-root/usr/share/icons/Yaru/scalable/places/start-here-symbolic.svg replaced with tree.svg
+
+#### Speech-Dispatcher configuration file edited
+/etc/speech-dispatcher/speechd.conf
+Removed # from espeak-ng, flite, rhvoice and pico-generic
+
+
+################# Default configurations and firstrun  ####################
+
+#### For every user created we have to give common application configurations so copy /etc/skell
+
+1  .config/autostart
+	1 - Artha
+	2 - login sound - canberra-gtk-play --id="/usr/share/Coconut/startup.ogg"
+	3 - transmission-gtk
+	4 - Firstrun script
+
+
+2 Templets (for caja file manager context menu)
+
+3 User Guide 
+	1 Mark as trusted to view icons (Launch and make it trusted)
+	2 execution permission removed from all documents to avoid run dialog
+	3 Give read/write access to groups of each launcher
+
+
+4 .config/artha.conf
+	1 - Artha notify switched off
+
+5 lios
+	1 run_text_cleaner = 1
+	2 language = 3
+	3 speech_language = 12
+
+
+6 .config/ubuntu-mate/welcome/preferences.json
+    1 Welcome message disabled
+
+7 .curlew
+	1 Curlew configuration file for setting current folder as destination directory
+	2 Play sound after finish
+	3 replace with UUSSEERR
+	
+
+8 LMMS 
+	1 ~/Documents/lmms
+	2 .lmmsrc.xml  Basic LMMS configuration 
+	3 replace with UUSSEERR
+
+
+9 .config/vlc/vlcrc
+	1 Starting dialog
+	2 Volume 
+
+10 .config/smplayer/smplayer.ini
+	1 Sound 100%
+
+11 .config/uGet/category/0000.json
+    1 Download directory
+
+12 .local/share/orca not copied
+	1 - Rate -> 65
+	2 - shortcuts for increasing and decreasing orca speed(UP/Down), pitch(Right/Left), Volume(Home/End)
+	3 - Orca preferences default voice to English (Great Britain) (Denis) 
+	4 - Orca speak mnemonics, child position enablded, Beep updates enablded 
+	5 - SBW orca preferences ( Disable key echo and Enable echo by character )
+	6 - sayAllStyle changed to sentence using full stop
+
+
+13 Default Applications setted using prefered applications 
+    1 Installed applications needed 
+    2 Copy /skel/.config/mimeapps.list
+
+14 Do not include - 
+    1 .bash_logout
+    2 .bashrc
+    3 .profile
+
+
+
+### Script to run after user creation added 
+created /squashfs-root/usr/local/sbin/adduser.local 
+chmod +x /squashfs-root/usr/local/sbin/adduser.local
+Then add following lines to it 
+
+# $1-username $2-uid $3-gid $4-home-directory-without-trailing-slash
+
+# Setting lmms rc file
+sed -i 's/UUSSEERR/'"$1"'/g' $4/.lmmsrc.xml
+
+# Setting curlew configurations file
+sed -i 's/UUSSEERR/'"$1"'/g' $4/.curlew/curlew.cfg
+
+# Setting smplayer configurations file
+sed -i 's/UUSSEERR/'"$1"'/g' $4/.config/smplayer/smplayer.ini
+
+
+#################  Boot Logo, Grub and Slidshow #######################################
+
+
+##### Plymouth boot title and logo
+
+custom-root/usr/share/plymouth/themes/ubuntu-mate-text/ubuntu-mate-text.plymouth edited
+title changed to Accessible-Coconut
+
+Replaced /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo.png 
+Replaced /usr/share/plymouth/themes/ubuntu-mate-logo/ubuntu-mate-logo16.png
+
+
+#### Change logo
+/usr/share/ubiquity/pixmaps/ubuntu_installed.png
+/usr/share/ubiquity/pixmaps/ubuntu/logo.png
+
+#### Booting issue fixed
+#### direct installer disabled since live desktop is more accessible
+#### EFI boot menu edited and made textonly instead of quiet splash
+
+edited /remaster/custom-live-iso/boot/grub/grub.cfg
+edited /remaster/custom-live-iso/boot/grub/loopback.cfg
+
+maybe-ubiquity argument removed for direct booting
+boot=casper argument removed for fixing booting issue
+Replaced 'quiet splash' with 'textonly'
+
+
+#### Change - Ubiquity installer icon
+# Replaced ubiquity.png in all folders in cubic/custom-root/usr/share/icons/Yaru/apps
+
+#### Ubiquity slideshow disabling transilation
+sudo geany /squashfs-root/usr/lib/ubiquity/ubiquity/frontend/base.py
+in function slideshow_get_available_locale add return 'C' at top
+
+#### Ubiquity slideshow updated
+edited /usr/share/ubiquity-slideshow/slides/index.html
+edited existing slides and added new slides
+
+######################### End of Customiziation log #############################
+
+
+
+
+
+
+
+################# Customizing Tips and Tricks ###################################
+
+1 To watch changes in dconf use : dconf watch / 
+
+2 Dumb dconf gsettings : dconf dump /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ > bkp
+
+2 To watch a directory use : inotifywatch -e modify,create,delete -r ~/.config
+
+3 Never use - inside Volume ID 
+
+4 Always fill Release Name Completely like "Accessible-Coconut 16.04 LTS "Xenial Xerus" - Release amd64 (20180201)"
+
+5 Copy files to filesystem directly without using cubic version which is slower 
+
+6 MathJax_Math is our default font 
+
+7 Use onboard to test Alt+Ctrl+Backspace to logout in virtual box enviroment
+
+8 Updating the system
+
+apt-get update
+
+apt-mark hold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text 
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+
+apt-get upgrade
+
+apt-mark unhold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text 
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+
+apt-get clean
+
+############################################
+
+Disclaimer
+
+    Copyright (c) 2022-2023 - Zendalona
+
+    All rights reserved . Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: 
+
+    Redistributions of source code must retain the below copyright notice, 
+
+    this list of conditions and the following disclaimer. 
+
+    Redistributions in binary form must reproduce the below copyright notice, 
+
+    this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. 
+
+    Neither the name of the nor the Lios team names of its 
+
+    contributors may be used to endorse or promote products derived from this software without specific prior written permission. 
+
+    THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE." 
+
+FREE SOFTWARE FREE SOCIETY
+
+
+We firmly believe that accessibility is not alone a matter of speech and tactile support, but it can be a thing of intuition as well.
+for your feed back and suggestion contact nalin.x.linux@gmail.com. 
+
+
+
+
+
+
+

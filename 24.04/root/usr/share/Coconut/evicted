@@ -1,0 +1,175 @@
+######################### Evicted ##############################################
+
+
+
+
+### Already updated
+### Installation guide updated
+edited /custom-root/etc/skel/Desktop/User Guide/2 Installation.text
+
+### Not necessory
+### packages
+gimp
+cuneiform
+youtube-dl
+dconf-editor 
+grub-customizer
+python-is-python3
+autopoint automake libtool build-essential cmake
+
+
+
+
+#### isolinux no longer used 
+#### Customizing isolinux live cd bootlogo ###
+Edit custom-live-iso/isolinux/txt.cfg
+# Replace textonly instead of quiet splash
+
+# Creating bootlogo ( prepared from non chroot environment )
+mkdir temp
+cd temp
+sudo apt-get install gfxboot-dev
+apt source gfxboot
+# change background images in gfxboot-x.x.x/themes/upstream
+# change config in gfxboot-x.x.x/themes/upstream
+cd gfxboot-x.x.x/themes/upstream
+make
+copy bootlogo to cubic/custom-disk/isolinux/
+copy message to cubic/custom-disk/boot/
+
+# cubic/custom-disk/isolinux/isolinux.cfg reverted
+
+
+
+
+### Already accessible
+### CPU-X accessible version     
+add-apt-repository ppa:nalin-x-linux/cpu-x
+apt install cpu-x
+
+### Variants are available by default
+### Espeak-NG with voice varients for all languages 
+# Varients created using a python script and updated package uploaded to PPA 
+sudo add-apt-repository ppa:nalin-x-linux/espeak-ng
+apt-get install espeak-ng espeak-ng-data
+
+#### No need to change 
+#### Mintstick USB formatter/Image Writter launcher Categories changed to GNOME;System;Filesystem;
+
+### Already accessible
+### Chrome with accessibility
+
+# Launcher edited 
+nano /usr/share/applications/chromium.desktop
+
+Exec=/usr/bin/chromium %U 
+replaced with 
+Exec=/usr/bin/chromium --force-renderer-accessibility %U 
+
+
+### Already in official package list 
+### RH-Voice installed
+add-apt-repository ppa:linvinus/rhvoice
+sudo apt-get install rhvoice speech-dispatcher-rhvoice rhvoice-english
+sudo sed -i 's/#AddModule "rhvoice"/AddModule "rhvoice"/' /etc/speech-dispatcher/speechd.conf
+
+#### Fixed vesion available in min repository
+#### Accessible version of Mintstick USB formatter/Image Writter installed 
+add-apt-repository ppa:nalin-x-linux/mintstick
+apt-get install mintstick
+
+
+
+#### Offline UEFI installation bug fixed
+grub-efi-amd64-signed installed
+
+
+### Phalanx launcher icon fixed
+edited /usr/local/share/applications/Phalanx.desktop
+
+### Background image changed (/usr/share/Coconut/Desktop.jpg)
+Text font : URW Bookman Light Italic
+Modifies version of 'Gnome Abstract Desktop' by  Charlie Henson
+
+### Secure shell (Ssh) installed
+sudo apt-get install ssh
+
+### telegram-purple installed 
+Access your Telegram account through Pidgin Internet Messenger
+
+### Touchpad on/off shortcut fixed
+apt-get install xserver-xorg-input-synaptics
+
+
+### Python-3 set as default python command ###
+apt-get install python-is-python3
+
+
+
+### System updated ###
+
+apt-get update
+
+apt-mark hold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text 
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+
+apt-get upgrade
+
+apt-mark unhold plymouth-theme-ubuntu-mate-text plymouth-theme-ubuntu-mate-logo gnome-session-canberra
+firefox* libreoffice* plymouth plymouth-label plymouth-theme-spinner plymouth-theme-ubuntu-text 
+ubiquity-slideshow-ubuntu-mate ubiquity-frontend-gtk ubiquity ubiquity-frontend-gtk-panel ubiquity-ubuntu-artwork
+
+apt-get clean
+
+
+### Screen reader basic user guide added to ~/etc/skel/User-Guide ###
+
+### New release based on Ubuntu-Mate 20.04.02 ###
+
+    
+### Fixed script for disabling touchpad on/off ###
+    
+### Fixed script for screen on/off ###
+
+
+### uGet download manager installed 
+sudo apt-get install uget
+Category view disabled and configuration file copied to custom-root/etc/skel/.config/uGet
+Replaced username in custom-root/etc/skel/.config/uGet/category/0000.json with UUSSEERR
+
+Following lines added to /usr/local/sbin/adduser.local
+# Setting uGet download directory
+sed -i 's/UUSSEERR/'"$1"'/g' $4/.config/uGet/category/0000.json
+
+
+### Login sound restored
+sudo apt-get install gnome-session-canberra
+sudo rm /usr/share/gnome/autostart/libcanberra-login-sound.desktop
+sudo rm /usr/share/gdm/autostart/LoginWindow/libcanberra-ready-sound.desktop
+
+
+
+### Firefox updated to version 82
+
+# Mintstick launcher Categories changed to GNOME;System;Filesystem;
+edited /usr/share/applications/mintstick.desktop
+and /usr/share/applications/mintstick-format.desktop
+
+
+### Fixed on update
+### Volume up down fixed 
+sudo touch /usr/share/pipewire/media-session.d/with-pulseaudio
+systemctl --user restart pipewire-session-manager 
+
+### Already there and both mode merged 
+### Added 'UEFI' to each entries in UEFI boot menu inside grub.cfg for distinguish boot mode
+
+### Thunderbird no longer developed
+### Replaced Evalution with Thunderbird
+sudo apt-get purge evolution*
+sudo apt-get install thunderbird
+
+################################ End of Evicted ################################
+
+
